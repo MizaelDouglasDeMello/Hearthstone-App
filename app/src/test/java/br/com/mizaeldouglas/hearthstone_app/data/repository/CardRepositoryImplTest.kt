@@ -5,7 +5,6 @@ import br.com.mizaeldouglas.hearthstone_app.data.dto.CardDTO
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import okhttp3.ResponseBody
-import org.junit.After
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
