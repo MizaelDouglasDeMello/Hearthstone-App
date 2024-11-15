@@ -1,6 +1,6 @@
 # Hearthstone App
 
-Este é um aplicativo de cartas Hearthstone desenvolvido com Kotlin, usando arquitetura MVVM, Retrofit para comunicação com APIs, Dagger Hilt para injeção de dependência e Picasso para carregamento de imagens.
+Este é um aplicativo de cartas Hearthstone desenvolvido com Kotlin, usando arquitetura MVVM, Retrofit para comunicação com APIs, Dagger Hilt para injeção de dependência e Picasso para carregamento de imagens e Unit, Mockito, Robolectric para testes que garantem qualidade e robustez.
 <br>
 <br>
 
