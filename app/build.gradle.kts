@@ -69,6 +69,9 @@ dependencies {
     testImplementation (libs.kotlinx.coroutines.test)
     testImplementation ("androidx.arch.core:core-testing:2.1.0")
 
+    testImplementation ("org.robolectric:robolectric:4.10.3")
+
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
