@@ -1,6 +1,5 @@
 package br.com.mizaeldouglas.hearthstone_app.prensentation.activities
 
-import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

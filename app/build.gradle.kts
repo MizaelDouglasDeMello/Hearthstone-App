@@ -43,6 +43,7 @@ android {
 }
 
 dependencies {
+    testImplementation(libs.junit.junit)
     val lifecycle_version = "2.8.7"
 
     // Picasso
@@ -62,6 +63,11 @@ dependencies {
     // Dagger - Hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
+
+    testImplementation ("junit:junit:4.13.2")
+    testImplementation (libs.mockito.core)
+    testImplementation (libs.kotlinx.coroutines.test)
+    testImplementation ("androidx.arch.core:core-testing:2.1.0")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
