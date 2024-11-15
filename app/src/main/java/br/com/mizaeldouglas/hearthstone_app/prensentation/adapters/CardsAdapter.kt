@@ -7,7 +7,9 @@ import br.com.mizaeldouglas.hearthstone_app.data.dto.CardDTO
 import br.com.mizaeldouglas.hearthstone_app.databinding.ItemRvCardBinding
 import com.squareup.picasso.Picasso
 
-class CardsAdapter : RecyclerView.Adapter<CardsAdapter.CardViewHolder>() {
+class CardsAdapter(
+    private val onClick: (CardDTO) -> Unit
+) : RecyclerView.Adapter<CardsAdapter.CardViewHolder>() {
     private var cardList = emptyList<CardDTO>()
 
     fun updateData(newCardList: List<CardDTO>){
@@ -19,6 +21,10 @@ class CardsAdapter : RecyclerView.Adapter<CardsAdapter.CardViewHolder>() {
         RecyclerView.ViewHolder(binding.root) {
         fun bind(cardDTO: CardDTO) {
             binding.txtName.text = cardDTO.name
+            binding.clItemCard.setOnClickListener {
+                onClick(cardDTO)
+            }
+
             Picasso.get()
                 .load(cardDTO.img)
                 .into(binding.imgCard)

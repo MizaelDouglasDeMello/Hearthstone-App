@@ -1,5 +1,6 @@
 package br.com.mizaeldouglas.hearthstone_app.prensentation.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -38,7 +39,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initialRecycleview() {
-        cardsAdapter = CardsAdapter()
+        cardsAdapter = CardsAdapter { card ->
+            val intent = Intent(applicationContext, DetailsActivity::class.java)
+            intent.putExtra("card", card)
+            Log.i("Card", "Card clicked: ${card.name}")
+            startActivity(intent)
+        }
 
         binding.rvCards.apply {
             layoutManager = GridLayoutManager(this@MainActivity, 2)
